@@ -1,0 +1,30 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "react", "react-perf", "import", "unicorn", "oxc"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn"
+  },
+  "env": { "browser": true, "node": true, "es2024": true },
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "typescript/no-explicit-any": "warn",
+    "import/no-cycle": "error",
+    "import/no-unassigned-import": ["warn", { "allow": ["**/*.css"] }],
+    // TypeScript already checks default imports, and electron-vite's ?nodeWorker modules are virtual.
+    "import/default": "off",
+    // Only matters with the React Compiler, which Lettra doesn't use (TanStack Virtual triggers it).
+    "react/incompatible-library": "off",
+    // In-place sorts on arrays we own are intentional.
+    "unicorn/no-array-sort": "off"
+  },
+  "overrides": [
+    {
+      "files": ["src/main/**/*.worker.ts"],
+      "rules": { "unicorn/require-post-message-target-origin": "off" }
+    }
+  ],
+  "ignorePatterns": ["out/**", "dist/**", "node_modules/**"]
+}

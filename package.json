@@ -1,0 +1,74 @@
+{
+  "name": "lettra",
+  "productName": "Lettra",
+  "version": "1.0.0",
+  "description": "Local font manager and Google Fonts catalog for macOS",
+  "license": "GPL-3.0-or-later",
+  "author": "kr0no (Aitor F.)",
+  "homepage": "https://github.com/kr0no/lettra",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kr0no/lettra.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kr0no/lettra/issues"
+  },
+  "keywords": [
+    "macos",
+    "fonts",
+    "font-manager",
+    "google-fonts",
+    "electron",
+    "typography"
+  ],
+  "private": true,
+  "type": "module",
+  "main": "./out/main/index.js",
+  "packageManager": "pnpm@10.28.2",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "typecheck:node": "tsc --noEmit -p tsconfig.node.json",
+    "typecheck:web": "tsc --noEmit -p tsconfig.web.json",
+    "typecheck": "pnpm typecheck:node && pnpm typecheck:web",
+    "lint": "oxlint src scripts tests electron.vite.config.ts vitest.config.ts",
+    "test": "vitest run",
+    "format": "prettier --write src scripts tests .github README.md docs/DEVELOPMENT.md package.json electron-builder.yml electron.vite.config.ts vitest.config.ts SECURITY.md \"tsconfig*.json\"",
+    "check": "pnpm typecheck && pnpm lint && pnpm test",
+    "dist": "pnpm build && electron-builder --mac --universal",
+    "dist:dir": "pnpm build && electron-builder --mac --universal --dir",
+    "snapshot": "node scripts/update-gf-snapshot.ts",
+    "icon": "electron scripts/make-icon.mjs"
+  },
+  "dependencies": {
+    "fontkit": "3.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.3.5",
+    "@tanstack/react-query": "5.108.4",
+    "@tanstack/react-virtual": "3.14.28",
+    "@types/node": "26.6.10",
+    "@types/react": "19.3.3",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.3.0",
+    "electron": "45.5.0",
+    "electron-builder": "26.18.0",
+    "electron-vite": "6.0.0",
+    "i18next": "27.2.9",
+    "lucide-react": "1.80.0",
+    "oxlint": "1.95.0",
+    "prettier": "3.10.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "react-i18next": "18.0.3",
+    "tailwindcss": "4.3.5",
+    "typescript": "7.0.2",
+    "vite": "8.3.8",
+    "vitest": "5.1.2",
+    "zustand": "5.1.0"
+  }
+}

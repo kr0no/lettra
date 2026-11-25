@@ -1,0 +1,47 @@
+appId: app.lettra.desktop
+productName: Lettra
+copyright: Copyright © 2026 kr0no (Aitor F.)
+directories:
+  buildResources: build
+  output: dist
+files:
+  - out/**
+  - resources/gf-snapshot.json.gz # read by the main process (offline catalog)
+  - package.json
+  - '!**/*.map'
+extraResources:
+  - from: out/THIRD_PARTY_NOTICES.txt
+    to: THIRD_PARTY_NOTICES.txt
+asar: true
+# Pure-JS dependencies only (fontkit); nothing to rebuild for Electron's ABI.
+npmRebuild: false
+mac:
+  target:
+    - target: dmg
+      # One DMG that runs natively on Apple Silicon and Intel (fontkit is pure JS, so the
+      # two architectures' app.asar files are identical and merge cleanly).
+      arch: [universal]
+    # The zip is what the in-app updater downloads.
+    - target: zip
+      arch: [universal]
+  artifactName: ${productName}-${version}-${arch}.${ext}
+  icon: build/icon.icns
+  category: public.app-category.graphics-design
+  minimumSystemVersion: '13.0'
+  # Ad-hoc signature: Apple Silicon refuses to launch an app whose signature is
+  # missing or broken. Not a Developer ID, so no notarization - personal builds only.
+  identity: '-'
+  hardenedRuntime: false
+  extendInfo:
+    NSHumanReadableCopyright: Copyright © 2026 kr0no (Aitor F.)
+# Close the doors an attacker could use to run Lettra's signed binary as plain Node.
+# grantFileProtocolExtraPrivileges stays on: the window loads its modules from file://.
+electronFuses:
+  runAsNode: false
+  enableNodeOptionsEnvironmentVariable: false
+  enableNodeCliInspectArguments: false
+  enableCookieEncryption: true
+  enableEmbeddedAsarIntegrityValidation: true
+  onlyLoadAppFromAsar: true
+dmg:
+  title: ${productName} ${version}

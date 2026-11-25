@@ -1,0 +1,42 @@
+name: Release
+
+# Push a tag like v0.2.0 to build the universal DMG and attach it to a draft release.
+# Review the draft's notes on GitHub, then publish it.
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  dmg:
+    name: Build universal DMG
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: pnpm/action-setup@v6
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - run: pnpm check
+
+      # Ad-hoc signed, not notarized (see electron-builder.yml). Don't let electron-builder
+      # go looking for a Developer ID in the runner's keychain.
+      - run: pnpm dist
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: 'false'
+
+      - uses: softprops/action-gh-release@v3
+        with:
+          draft: true
+          generate_release_notes: true
+          files: |
+            dist/*.dmg
+            dist/*.zip

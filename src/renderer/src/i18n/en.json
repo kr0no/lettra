@@ -1,0 +1,291 @@
+{
+  "sidebar": {
+    "library": "Library",
+    "all": "All Fonts",
+    "user": "User Installed",
+    "system": "System",
+    "google": "Google Fonts",
+    "googleAll": "All Families",
+    "updatesItem": "Updates",
+    "updates_one": "{{count}} update available",
+    "updates_other": "{{count}} updates available",
+    "favorites": "Favorites",
+    "collections": "Collections"
+  },
+  "toolbar": {
+    "search_one": "Search 1 family",
+    "search_other": "Search {{formatted}} families",
+    "searchLabel": "Search fonts",
+    "previewText": "Preview text",
+    "previewPlaceholder": "Type to preview (empty shows family names)",
+    "size": "Size",
+    "view": "View",
+    "grid": "Grid view",
+    "list": "List view",
+    "scanning": "Scanning {{parsed}} of {{total}}…"
+  },
+  "browse": {
+    "styles_one": "{{count}} style",
+    "styles_other": "{{count}} styles",
+    "duplicate": "Duplicate",
+    "unavailable": "Preview unavailable",
+    "scanning": "Scanning fonts…",
+    "noResults": "No fonts match \"{{query}}\"",
+    "searchGoogle": "Search Google Fonts for \"{{query}}\"",
+    "searchLibrary": "Search your fonts for \"{{query}}\"",
+    "empty": "No fonts here yet"
+  },
+  "source": {
+    "user": "User",
+    "local": "Local",
+    "system": "System",
+    "apple-asset": "Apple"
+  },
+  "detail": {
+    "close": "Close details",
+    "variable": "Variable",
+    "readOnly": "Read-only",
+    "waterfall": "Waterfall",
+    "styles": "Styles",
+    "axes": "Axes",
+    "reset": "Reset",
+    "instances": "Named instances",
+    "glyphs": "Glyphs",
+    "glyphCount_one": "{{count}} character",
+    "glyphCount_other": "{{formatted}} characters",
+    "loadingGlyphs": "Loading glyphs…",
+    "file": "File",
+    "source": "Source",
+    "format": "Format",
+    "postscript": "PostScript name",
+    "version": "Version",
+    "designer": "Designer",
+    "location": "Location",
+    "collection": "Collection",
+    "collectionValue": "Face {{index}} of a collection",
+    "duplicates": "Duplicates",
+    "duplicatesValue_one": "{{count}} other copy installed",
+    "duplicatesValue_other": "{{count}} other copies installed",
+    "reveal": "Reveal in Finder",
+    "uninstallStyle": "Uninstall This Style",
+    "uninstallFamily": "Uninstall family"
+  },
+  "blocks": {
+    "other": "Other"
+  },
+  "category": {
+    "sans-serif": "Sans Serif",
+    "serif": "Serif",
+    "display": "Display",
+    "handwriting": "Handwriting",
+    "monospace": "Monospace"
+  },
+  "weights": {
+    "100": "Thin",
+    "200": "ExtraLight",
+    "300": "Light",
+    "400": "Regular",
+    "500": "Medium",
+    "600": "SemiBold",
+    "700": "Bold",
+    "800": "ExtraBold",
+    "900": "Black",
+    "1000": "ExtraBlack",
+    "italic": "Italic"
+  },
+  "google": {
+    "loading": "Loading the Google Fonts catalog…",
+    "previewUnavailable": "Preview unavailable",
+    "install": "Install",
+    "retry": "Retry",
+    "failed": "Install failed",
+    "installed": "Installed",
+    "installedElsewhere": "A font with this name is already installed outside Lettra.",
+    "update": "Update",
+    "uninstall": "Uninstall",
+    "installFailedNamed": "Couldn't install {{name}}",
+    "installFailed": "Install failed",
+    "axisRange": "{{name}} {{min}} to {{max}}",
+    "uninstallBody_one": "The file in the {{folder}} folder will be moved to the Trash.",
+    "uninstallBody_other": "The {{count}} files in the {{folder}} folder will be moved to the Trash.",
+    "sort": "Sort",
+    "sorts": {
+      "popular": "Popular",
+      "newest": "Newest",
+      "alpha": "A-Z"
+    },
+    "offlineCatalog": "Offline, showing the built-in catalog",
+    "phase": {
+      "resolving": "Preparing…",
+      "downloading": "Downloading…",
+      "verifying": "Checking…",
+      "committing": "Installing…",
+      "done": "Done",
+      "error": "Failed"
+    },
+    "mode": "Install format",
+    "modes": {
+      "static": "Static",
+      "variable": "Variable"
+    },
+    "modeHint": {
+      "static": "One file per style. Works everywhere, including Office.",
+      "variable": "One or two files covering every weight. Best for design apps."
+    },
+    "about": "About",
+    "designers": "Designers",
+    "license": "License",
+    "licenses": {
+      "ofl": "SIL Open Font License",
+      "apache": "Apache License 2.0",
+      "ufl": "Ubuntu Font License"
+    },
+    "subsets": "Subsets",
+    "added": "Added",
+    "updated": "Last updated",
+    "popularity": "Popularity",
+    "installedAs": "Installed as",
+    "installGoogleVersion": "Install Google Version",
+    "replaceFailed": "Installed, but the old copy couldn't be removed"
+  },
+  "dialogs": {
+    "cancel": "Cancel",
+    "conflict": {
+      "title": "\"{{family}}\" is already installed",
+      "body": "Your Mac already has a family called \"{{name}}\" ({{sources}}). Installing the Google version as well can make apps pick either copy.",
+      "replace": "Replace",
+      "installAnyway": "Install Anyway",
+      "replaceHint_one": "Replace moves {{count}} existing style in your fonts folder to the Trash first.",
+      "replaceHint_other": "Replace moves {{count}} existing styles in your fonts folder to the Trash first.",
+      "readOnlyHint": "The existing copy is a system font, so it can't be replaced."
+    },
+    "uninstall": {
+      "title": "Uninstall \"{{name}}\"?",
+      "body_one": "This file will be moved to the Trash:",
+      "body_other": "These {{count}} files will be moved to the Trash:",
+      "confirm": "Move to Trash",
+      "collectionWarning": "This file is a font collection. Removing it also removes: {{faces}}.",
+      "readOnly_one": "{{count}} style is a system font and will stay installed.",
+      "readOnly_other": "{{count}} styles are system fonts and will stay installed."
+    }
+  },
+  "favorites": {
+    "add": "Add {{name}} to Favorites",
+    "remove": "Remove {{name}} from Favorites",
+    "empty": "No favorites yet.\nClick the heart on any font to keep it here."
+  },
+  "collections": {
+    "addTo": "Add to collection",
+    "none": "No collections yet.",
+    "newName": "Collection name",
+    "newPlaceholder": "New collection…",
+    "create": "Create collection",
+    "new": "New collection",
+    "renameHint": "Double-click or press F2 to rename",
+    "rename": "Rename collection",
+    "delete": "Delete",
+    "deleteTitle": "Delete \"{{name}}\"?",
+    "deleteBody": "The collection is removed. Its fonts stay installed.",
+    "empty": "Use + to group fonts for a project.",
+    "emptyView": "This collection is empty.\nUse the folder button in a font's details to add it."
+  },
+  "compare": {
+    "title": "Compare · {{count}}",
+    "pin": "Compare {{name}}",
+    "pinTip": "Compare {{name}} (or ⌘-click the card)",
+    "installAll": "Install All ({{count}})",
+    "unpin": "Stop comparing {{name}}",
+    "full": "You can compare up to {{count}} fonts",
+    "back": "Back to Fonts",
+    "installed": "Installed",
+    "count": "{{count}} of {{max}}",
+    "clear": "Clear",
+    "open": "Compare",
+    "needTwo": "Pin at least two fonts to compare"
+  },
+  "drop": {
+    "title": "Drop to install",
+    "hint": "Fonts are copied into your fonts folder (~/Library/Fonts)",
+    "installed_one": "Installed {{count}} font file",
+    "installed_other": "Installed {{count}} font files",
+    "skipped_one": "{{count}} file skipped (not a font or already installed)",
+    "skipped_other": "{{count}} files skipped (not fonts or already installed)",
+    "alreadyInstalled_one": "Already installed",
+    "alreadyInstalled_other": "Already installed",
+    "nothing": "No fonts found in what you dropped",
+    "failed": "Couldn't install the dropped files"
+  },
+  "feedback": {
+    "dismiss": "Dismiss",
+    "actionFailed": "Couldn't finish that"
+  },
+  "settings": {
+    "title": "Settings",
+    "done": "Done",
+    "language": "Language",
+    "languages": {
+      "system": "Same as macOS"
+    },
+    "installFormat": "Google Fonts format",
+    "offline": "Offline mode",
+    "offlineLabel": "Don't connect to Google",
+    "offlineHint": "Local fonts keep working. The catalog uses its saved copy and previews are off.",
+    "catalog": "Catalog",
+    "catalogHint": "Refreshed automatically once a week.",
+    "catalogInfo": "{{formatted}} families · {{date}} · {{source}}",
+    "origin": {
+      "network": "downloaded",
+      "cache": "saved copy",
+      "snapshot": "built-in copy"
+    },
+    "refresh": "Refresh Now",
+    "refreshing": "Refreshing…",
+    "apiKey": "Google Fonts API key",
+    "apiKeyPlaceholder": "Optional",
+    "apiKeyHint": "Only used if Lettra's usual way of downloading static fonts stops working.",
+    "appearance": "Appearance",
+    "themes": {
+      "system": "System",
+      "light": "Light",
+      "dark": "Dark"
+    },
+    "updates": "Updates",
+    "checkUpdates": "Check for new versions automatically",
+    "checkNow": "Check Now",
+    "checking": "Checking…",
+    "upToDate": "Lettra {{version}} is up to date.",
+    "current": "Version {{version}}",
+    "checkFailed": "Couldn't check for updates. Try again later."
+  },
+  "error": {
+    "title": "Something went wrong",
+    "body": "Lettra hit an unexpected error. Reloading usually fixes it. The details are in the log (Help > Show Logs).",
+    "reload": "Reload"
+  },
+  "update": {
+    "available": "Lettra {{version}} is available",
+    "title": "Lettra {{version}} is available",
+    "intro": "You have {{current}}. Lettra downloads the new version, checks it and restarts to finish.",
+    "install": "Update",
+    "later": "Later",
+    "hide": "Hide",
+    "notes": "What's New",
+    "starting": "Starting the download…",
+    "downloading": "Downloading… {{received}} MB of {{total}} MB",
+    "verifying": "Checking the download…",
+    "ready": "Ready. Lettra will close and open again on the new version.",
+    "restart": "Restart Lettra",
+    "failed": "The update failed: {{message}}",
+    "retry": "Try Again",
+    "openPage": "Open Download Page",
+    "blocked": {
+      "location": "Lettra can't update itself from where it is now. Move it to the Applications folder and open it from there, or download the new version from GitHub.",
+      "dev": "Updates install only in the packaged app.",
+      "no-zip": "This release doesn't include an update package. Download it from GitHub."
+    }
+  },
+  "errors": {
+    "offline": "Lettra is in offline mode. Turn it off in Settings to download.",
+    "network": "Couldn't reach the server. Check your connection and try again."
+  }
+}

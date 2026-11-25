@@ -1,0 +1,6 @@
+nodeLinker: hoisted
+
+# Electron 45 has no postinstall: it downloads its binary on first use
+# (or run `pnpm exec install-electron`). Nothing here needs install scripts.
+ignoredBuiltDependencies:
+  - electron-winstaller
