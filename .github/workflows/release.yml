@@ -28,7 +28,8 @@ jobs:
       - run: pnpm check
 
       # Ad-hoc signed, not notarized (see electron-builder.yml). Don't let electron-builder
-      # go looking for a Developer ID in the runner's keychain.
+      # go looking for a Developer ID in the runner's keychain. The release itself is made
+      # by the next step; `pnpm dist` passes --publish never so electron-builder doesn't try.
       - run: pnpm dist
         env:
           CSC_IDENTITY_AUTO_DISCOVERY: 'false'

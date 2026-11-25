@@ -39,7 +39,7 @@
     "test": "vitest run",
     "format": "prettier --write src scripts tests .github README.md docs/DEVELOPMENT.md package.json electron-builder.yml electron.vite.config.ts vitest.config.ts SECURITY.md \"tsconfig*.json\"",
     "check": "pnpm typecheck && pnpm lint && pnpm test",
-    "dist": "pnpm build && electron-builder --mac --universal",
+    "dist": "pnpm build && electron-builder --mac --universal --publish never",
     "dist:dir": "pnpm build && electron-builder --mac --universal --dir",
     "snapshot": "node scripts/update-gf-snapshot.ts",
     "icon": "electron scripts/make-icon.mjs"
